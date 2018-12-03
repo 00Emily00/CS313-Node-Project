@@ -19,7 +19,7 @@ app.listen(app.get("port"), function() {
 
 function getLogin(req, res) {
     console.log("getting login information");
-    res.render('navigation');
+    res.write("Got login information");
 //    res.send("Login information");
 } 
 
