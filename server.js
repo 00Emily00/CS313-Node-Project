@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var fs = require('fs');
 
 const { Pool } = require("pg");
 //connection needed to connect to the database --the server, etc
@@ -18,13 +19,28 @@ app.listen(app.get("port"), function() {
 
 function getLogin(req, res) {
     console.log("getting login information");
-
+    res.render('navigation');
+//    res.send("Login information");
 } 
 
 function getDiet(req, res) {
     console.log("getting diet information");
 }
 
+let handleRequest = (req, res) => {
+    res.writeHead(200, {
+        'Content-Type': 'text/plain'
+    });
+    fs.readFile('./navigation.html',null,function(error, nav) {
+        if(error) {
+            res.writeHead(404);
+            res.write('file not found');
+        } else {
+            res.write(nav);
+        }
+        res.end();
+    });
+};
 //function getRecipesFromId(id, callback) {
 //    console.log("getRecipesFromId called with id ", id);
 //    
