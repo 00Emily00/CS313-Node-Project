@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var http = require('http');
 var fs = require('fs');
 
 const { Pool } = require("pg");
@@ -7,6 +8,14 @@ const { Pool } = require("pg");
 const connectionString = process.env.DATABASE_URL || "postgres://:emily@localhost:5432/dietplanproject";
 const pool = new Pool({connectionString: connectionString});
 app.set("port", (process.env.PORT || 5000));
+
+http.createServer(function (req, res) {
+    fs.readFile('navigation.html', function(err, data) {
+        res.writeHead(200, {'Content-Type' : 'text/html'});
+        res.write(data);
+        res.end();
+    });
+});
 
 app.get("/login" , getLogin); //endpoint
 app.get("/diet", getDiet);
@@ -26,6 +35,7 @@ function getLogin(req, res) {
 function getDiet(req, res) {
     console.log("getting diet information");
 }
+
 
 let handleRequest = (req, res) => {
     res.writeHead(200, {
