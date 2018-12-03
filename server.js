@@ -9,8 +9,8 @@ app.set("port", (process.env.PORT || 5000));
 
 app.get("/login" , getLogin); //endpoint
 app.get("/diet", getDiet);
-app.get("/dietInformation", getDietInformation);
-app.get("/recipes:id", getRecipes);
+//app.get("/dietInformation", getDietInformation);
+//app.get("/recipes:id", getRecipes);
 
 app.listen(app.get("port"), function() {
     console.log("Now listening for connections on port: ", app.get("port"));
