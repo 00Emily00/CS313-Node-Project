@@ -9,8 +9,8 @@ app.set("port", (process.env.PORT || 5000));
 
 app.get("/login" , getLogin); //endpoint
 app.get("/diet", getDiet);
-//app.get("/dietInformation"); //do i need this if single page website?
-//app.get("/recipes")
+app.get("/dietInformation", getDietInformation);
+app.get("/recipes:id", getRecipes);
 
 app.listen(app.get("port"), function() {
     console.log("Now listening for connections on port: ", app.get("port"));
@@ -18,12 +18,26 @@ app.listen(app.get("port"), function() {
 
 function getLogin(req, res) {
     console.log("getting login information");
+
 } 
 
 function getDiet(req, res) {
     console.log("getting diet information");
 }
 
-CREATE USER loginUser WITH PASSWORD 'user';
-GRANT SELECT, INSERT, UPDATE ON login TO loginUser;
-GRANT USAGE, SELECT ON SEQUENCE login_id_seq TO loginUser;
+//function getRecipesFromId(id, callback) {
+//    console.log("getRecipesFromId called with id ", id);
+//    
+//    var sql = "SELECT id FROM recipe_name";
+//    var params = [id];
+//    
+//    pool.query(sql, params, function(err, result) {
+//       if(err) {
+//           console.log("An error with the DB occured");
+//           console.log(err);
+//           callback(err, null);
+//       } 
+//        console.log("Found DB result: " + JSON.stringify(result.rows));
+//        callback(null, result.rows)
+//    });
+//}

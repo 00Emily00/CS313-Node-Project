@@ -6,17 +6,20 @@ CREATE TABLE login (
 
 INSERT INTO login(username, password) VALUES('emily', 'barrera');
 
-CREATE TABLE ingredient_names (
+CREATE TABLE ingredients (
     id SERIAL PRIMARY KEY NOT NULL
     , ingredients VARCHAR(500) NOT NULL
 );
-CREATE TABLE recipe_instructions (
-    id SERIAL PRIMARY KEY NOT NULL
-    , instructions TEXT NOT NULL
-);
+
 CREATE TABLE recipes (
     id SERIAL PRIMARY KEY NOT NULL
     , name VARCHAR(500) NOT NULL
-    , ingredients_id SMALLINT REFERENCES ingredient_names(id)
-    , instructions_id SMALLINT REFERENCES recipe_instructions(id)
+    , recipe_instructions VARCHAR NOT NULL
+    , ingredients_id SMALLINT REFERENCES ingredients(id)
+);
+
+CREATE TABLE ingredients_recipes (
+    id SERIAL PRIMARY KEY NOT NULL
+    , ingredients_id SMALLINT REFERENCES ingredients(id)
+    , recipes_id SMALLINT REFERENCES recipes(id)
 );
