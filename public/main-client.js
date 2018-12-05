@@ -5,4 +5,9 @@ function getInformation() {
     //updating the DOM
     var info = $("#dietFacts").val();
     console.log("Info" +info);
+    
+    $.get("/information", function(data) {
+        console.log("Back from the server with:");
+        console.log(data);
+    })
 }
