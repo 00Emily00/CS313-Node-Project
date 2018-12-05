@@ -7,6 +7,8 @@ var fs = require('fs');
 const PORT = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json()); //support json encoded bodies
+app.use(express.urlencoded({extended: true})); //support url encoded bodies
 
 app.get("/recipes", function(req, res) {
     console.log("Getting the recipes");
@@ -31,6 +33,13 @@ app.get("/information", function(req, res) {
     }
      
     res.json(results);
+});
+
+app.post("/recipes", function(req, res) {
+    var name = req.body.name;
+    console.log("Creating a nwe recipe");
+    
+    res.json({success:true});
 });
 
 app.listen(PORT, function() {
