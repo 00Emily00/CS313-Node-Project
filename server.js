@@ -1,50 +1,50 @@
-//var express = require("express");
-//var app = express();
-//const path = require("path");
-//var http = require('http');
-//var fs = require('fs');
-//
-//const PORT = process.env.PORT || 5000;
-//
-//app.use(express.static(path.join(__dirname, "public")));
-//app.use(express.json()); //support json encoded bodies
-//app.use(express.urlencoded({extended: true})); //support url encoded bodies
-//
-//app.get("/recipes", function(req, res) {
-//    console.log("Getting the recipes");
-//    
-//    var results = {
-//        recipes: [
-//            {id: 1, name: "Cereal", steps: "Put milk inside a bowl of cereal"},
-//            {id: 2, name: "Fruit Yogurt", steps: "Put fruit inside Yogurt"}
-//            ]
-//    }
-//    
-//    res.json(results);
-//});
-//
-//app.get("/information", function(req, res) {
-//    console.log("Getting the information");
-//    
-//     var results = {
-//        recipes: [
-//            {id: 1, rule: "It is important to always drink water"}
-//            ]
-//    }
-//     
-//    res.json(results);
-//});
-//
-//app.post("/recipes", function(req, res) {
-//    var name = req.body.name;
-//    console.log("Creating a nwe recipe");
-//    
-//    res.json({success:true});
-//});
-//
-//app.listen(PORT, function() {
-//    console.log("listening on port " + PORT);
-//});
+var express = require("express");
+var app = express();
+const path = require("path");
+var http = require('http');
+var fs = require('fs');
+
+const PORT = process.env.PORT || 5000;
+
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json()); //support json encoded bodies
+app.use(express.urlencoded({extended: true})); //support url encoded bodies
+
+app.get("/recipes", function(req, res) {
+    console.log("Getting the recipes");
+    
+    var results = {
+        recipes: [
+            {id: 1, name: "Cereal", steps: "Put milk inside a bowl of cereal"},
+            {id: 2, name: "Fruit Yogurt", steps: "Put fruit inside Yogurt"}
+            ]
+    }
+    
+    res.json(results);
+});
+
+app.get("/information", function(req, res) {
+    console.log("Getting the information");
+    
+     var results = {
+        recipes: [
+            {id: 1, rule: "It is important to always drink water"}
+            ]
+    }
+     
+    res.json(results);
+});
+
+app.post("/recipes", function(req, res) {
+    var name = req.body.name;
+    console.log("Creating a nwe recipe");
+    
+    res.json({success:true});
+});
+
+app.listen(PORT, function() {
+    console.log("listening on port " + PORT);
+});
 
 
 
