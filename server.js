@@ -8,6 +8,30 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, "public")));
 
+app.get("/recipes", function(req, res) {
+    console.log("Getting the recipes");
+    
+    var results = {
+        recipes: [
+            {id: 1, name: "Cereal", steps: "Put milk inside a bowl of cereal"},
+            {id: 2, name: "Fruit Yogurt", steps: "Put fruit inside Yogurt"}
+            ]
+    }
+    
+    res.json(results);
+});
+
+app.get("/information", function(req, res) {
+    console.log("Getting the information");
+    
+     var results = {
+        recipes: [
+            {id: 1, rule: "It is important to always drink water"}
+            ]
+    }
+     
+    res.json(results);
+});
 
 app.listen(PORT, function() {
     console.log("listening on port " + PORT);
