@@ -10,6 +10,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json()); //support json encoded bodies
 app.use(express.urlencoded({extended: true})); //support url encoded bodies
 
+
+
 app.get("/recipes", function(req, res) {
     console.log("Getting the recipes");
     
