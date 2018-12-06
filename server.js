@@ -17,9 +17,9 @@ app.use(express.urlencoded({extended: true})); //support url encoded bodies
 app.get("/recipes", recipeController.getRecipe);
 
 
-app.get("/information", );
+//app.get("/information", );
 
-app.post("/recipes", recipeController.postRecipe);
+//app.post("/recipes", recipeController.postRecipe);
 
 app.listen(PORT, function() {
     console.log("listening on port " + PORT);

@@ -10,23 +10,23 @@ function getAllRecipes(callback) {
     callback(results);
     //function(results) {  res.json(results) }); from recipeController.js
 }
-
-function getRecipeById(id, callback) {
-    //get recipe from the DB that matches that id
-    var results = {id: id, name: "PB & J", steps: "Grab 2 slices of bread and put PB & J inside of it"};
-    
-    callback(results);
-}
-
-function insertNewRecipe(name, steps, callback) {
-    //create the new recipe in the database with the provided name
-    var results = {success: true};
-    
-    callback(results);
-}
+//
+//function getRecipeById(id, callback) {
+//    //get recipe from the DB that matches that id
+//    var results = {id: id, name: "PB & J", steps: "Grab 2 slices of bread and put PB & J inside of it"};
+//    
+//    callback(results);
+//}
+//
+//function insertNewRecipe(name, steps, callback) {
+//    //create the new recipe in the database with the provided name
+//    var results = {success: true};
+//    
+//    callback(results);
+//}
 
 module.exports = {
-    getAllRecipes: getAllRecipes,
-    getRecipeById: getRecipeById,
-    insertNewRecipe: insertNewRecipe
+    getAllRecipes: getAllRecipes
+//    getRecipeById: getRecipeById,
+//    insertNewRecipe: insertNewRecipe
 }
