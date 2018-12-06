@@ -17,8 +17,11 @@ function getRecipes() {
     
     $.get("/recipes", function(data) {
         
+    let list = "";
         for(r in data.recipes) {
-            alert(data.recipes[r].name);
+            list += "<h1>" + data.recipes[r].name + "</h1><br>";
+
         }
+        document.getElementById("content").innerHTML = list;
     });
 }
