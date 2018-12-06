@@ -18,8 +18,8 @@ function getRecipes() {
     $.get("/recipes", function(data) {
         alert(data);
     let list = "";
-        for(r in data.recipes) {
-            list += "<h1>" + data.recipes[r].name + "</h1><p>" + data.recipes[r].recipe_instructions + "</p><br>";
+        for(r in data) {
+            list += "<h1>" + data[r].name + "</h1><p>" + data[r].recipe_instructions + "</p><br>";
 
         }
         document.getElementById("content").innerHTML = list;
