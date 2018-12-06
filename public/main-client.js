@@ -6,8 +6,9 @@ function getInformation() {
     var info = $("#dietFacts").val();
     console.log("Info" +info);
     
-    $.get("/information", function(data) {
+    //getting info from server.js
+    $.get("/dietInformation", {info: info), function(data) {
         console.log("Back from the server with:");
         console.log(data);
-    })
+    });
 }

@@ -23,3 +23,7 @@ CREATE TABLE ingredients_recipes (
     , ingredients_id SMALLINT REFERENCES ingredients(id)
     , recipes_id SMALLINT REFERENCES recipes(id)
 );
+
+INSERT INTO recipes(name, recipe_instructions) VALUES ('Cereal', 'Pour the cereal into a bowl and then add milk.');
+INSERT INTO ingredients(ingredients) VALUES ('Water');
+INSERT INTO recipes(name, recipe_instructions) VALUES ('Water and Ice', 'Put ice cubes inside a cup and then slowly add water inside until glass is full.');
