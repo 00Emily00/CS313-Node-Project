@@ -19,7 +19,7 @@ function getRecipes() {
         
     let list = "";
         for(r in data.recipes) {
-            list += "<h1>" + data.recipes[r].name + "</h1><p>" + data.recipes[r].steps + "</p><br>";
+            list += "<h1>" + data.recipes[r].name + "</h1><p>" + data.recipes[r].recipe_instructions + "</p><br>";
 
         }
         document.getElementById("content").innerHTML = list;

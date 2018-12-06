@@ -1,13 +1,19 @@
-function getAllRecipes(callback) {
+function getAllRecipes(pool, callback) {
     //get all recipes from DB swap this out for database stuff
     //callback call me when done
-    var results = {
-        recipes: [
-            {id: 1, name: "Cereal", steps: "Put milk inside a bowl of cereal"},
-            {id: 2, name: "Fruit Yogurt", steps: "Put fruit inside Yogurt"}
-            ]
-    }
-    callback(results);
+    var DBinfo = "SELECT name, recipe_instructions FROM recipes";
+    
+    pool.query(DBinfo, function(err, results) {
+            callback(results.rows);
+    });
+    
+//    var results = {
+//        recipes: [
+//            {id: 1, name: "Cereal", steps: "Put milk inside a bowl of cereal"},
+//            {id: 2, name: "Fruit Yogurt", steps: "Put fruit inside Yogurt"}
+//            ]
+//    }
+//    callback(results);
     //function(results) {  res.json(results) }); from recipeController.js
 }
 //
