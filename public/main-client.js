@@ -16,7 +16,7 @@ function getRecipes() {
     var r = $("#recipes").val();
     
     $.get("/recipes", function(data) {
-        
+        alert(data);
     let list = "";
         for(r in data.recipes) {
             list += "<h1>" + data.recipes[r].name + "</h1><p>" + data.recipes[r].recipe_instructions + "</p><br>";
