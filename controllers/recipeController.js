@@ -4,8 +4,9 @@ function getRecipe(req, res) {
     console.log("Getting the recipes");
     var id = req.query.id;
     
+    //this calls the function in the model and function(results) brings back resuls from the callback in the model
     recipeModels.getAllRecipes(function(results) {
-        res.json(results);
+        res.json(results); //sents it back to the client
     });
 }
    

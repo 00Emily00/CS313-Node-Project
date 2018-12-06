@@ -16,6 +16,10 @@ function getRecipes() {
     var r = $("#recipes").val();
     
     $.get("/recipes", function(data) {
-        alert(data);
+        var recipeInfo = JSON.parse(data);
+        
+        for(r in recipeInfo) {
+            alert(recipeInfo[r]);
+        }
     });
 }
