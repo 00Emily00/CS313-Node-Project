@@ -11,14 +11,14 @@ function getRecipe(req, res) {
    
 }
 
- recipeModels.insertNewRecipe(name,steps, function(results) {
-        res.json(results);
-    }); //this is the function we want to call when the function in recipeModel is done  
+// recipeModels.insertNewRecipe(name,steps, function(results) {
+//        res.json(results);
+//    }); //this is the function we want to call when the function in recipeModel is done  
  
 
-recipeModels.getRecipeById(id, function(results) {
-    res.json(results);
-});
+//recipeModels.getRecipeById(id, function(results) {
+//    res.json(results);
+//});
 
 
 //function postRecipe(req, res) {
