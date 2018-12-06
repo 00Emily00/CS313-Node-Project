@@ -32,7 +32,7 @@ function getRecipe(req, res) {
     
 
 module.exports = {
-    getRecipe: getRecipe,
-    postRecipe: postRecipe
+    getRecipe: getRecipe
+//    postRecipe: postRecipe
 };
         
