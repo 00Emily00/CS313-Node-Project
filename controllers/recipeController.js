@@ -1,4 +1,4 @@
-const recipeModels = require("../models/recipeModel.js");
+const recipeModels = require("./../models/recipeModel.js");
 
 function getRecipe(req, res) {
     console.log("Getting the recipes");
