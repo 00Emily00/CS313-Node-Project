@@ -18,7 +18,7 @@ function getRecipes() {
     $.get("/recipes", function(data) {
         
         for(r in data.recipes) {
-            alert(data.recipes[r]);
+            alert(data.recipes[r].name);
         }
     });
 }
