@@ -7,8 +7,8 @@ body {
     color: darkgreen;
     border-style: solid;
     background-color: lightyellow;
-    opacity: 0.3;
-    filter: alpha(opacity=30);
+    opacity: 0.5;
+    filter: alpha(opacity=50);
     width: 50%;
     padding: 5%;
     margin: auto;
