@@ -1,7 +1,8 @@
 body {
     margin: 0;
     font-family: sans-serif, serif, inherit;
-    background-color: black;
+    background-image: url("nutritionbackgroundbig.jpg");
+    
 }
 .btn-group button {
   background-color: #4CAF50; 
