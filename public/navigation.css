@@ -3,7 +3,7 @@ body {
     font-family: sans-serif, serif, inherit;
     background-image: url("nutritionbackgroundbig.jpg");
 }
-.border {
+#border {
     color: lightgreen;
     border-style: solid;
     width: 50%;
