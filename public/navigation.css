@@ -6,6 +6,7 @@ body {
 #border {
     color: lightgreen;
     border-style: solid;
+    background-color: lightyellow;
     width: 50%;
     padding: 5%;
     margin: auto;
