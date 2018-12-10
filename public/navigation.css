@@ -4,7 +4,7 @@ body {
     background-image: url("nutritionbackgroundbig.jpg");
 }
 #border {
-    color: lightgreen;
+    color: darkgreen;
     border-style: solid;
     background-color: lightyellow;
     width: 50%;
