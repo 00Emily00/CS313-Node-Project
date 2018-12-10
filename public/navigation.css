@@ -2,6 +2,10 @@ body {
     margin: 0;
     font-family: sans-serif, serif, inherit;
     background-image: url("nutritionbackgroundbig.jpg");
+     background-color: aliceblue;
+    width: 50%;
+    padding: 5%;
+    margin: auto;
     
 }
 .btn-group button {
@@ -11,7 +15,9 @@ body {
   padding: 10px 24px; 
   cursor: pointer; 
   float: left;
-
+  align-content: center;
+  text-align: center;
+}
 
 .btn-group:after {
   content: "";
