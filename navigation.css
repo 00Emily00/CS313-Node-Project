@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: sans-serif, serif, inherit;
+    background-color: black;
 }
 .btn-group button {
   background-color: #4CAF50; /* Green background */
