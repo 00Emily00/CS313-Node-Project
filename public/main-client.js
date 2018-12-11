@@ -42,7 +42,7 @@ function getIngredients() {
     for(i in data) {
         list += data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + "</p><br>";
     }
-        list += "<button id='addMoreIngredients' onclick='postIngredients()'>"
+        list += "<button id='addMoreIngredients' onclick='postIngredients()' name='Add More Items'>"
         document.getElementById("content").innerHTML = list;
     });
 }
@@ -64,6 +64,9 @@ function getIngredients() {
 
 function postIngredients() {
     alert("postIngredients function was called");
+    
+    let add = "";
+    add += "<input typ='text'>Ingredient';
 }
 
 
