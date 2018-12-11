@@ -1,4 +1,4 @@
-const ingredientsModels = require("./../models/ingredientsModel.js");
+const ingredientsModels = require("./../models/ingredientModel.js");
 
 const { Pool } = require("pg");
 //connection needed to connect to the database --the server, etc
