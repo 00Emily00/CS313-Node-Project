@@ -5,7 +5,7 @@ const { Pool } = require("pg");
 const connectionString = process.env.DATABASE_URL || "postgres://familyhistoryuser:emily@localhost:5432/familyhistory";
 const pool = new Pool({connectionString: connectionString});
 
-function getdietInformation(req, res) {
+function getDietInformation(req, res) {
      console.log("Getting diet information");
     var id = req.query.id;
     
@@ -16,7 +16,7 @@ function getdietInformation(req, res) {
 }
 
 module.exports = {
-    getDietInformation: getdietInformation
+    getDietInformation: getDietInformation
 }
 
 //handling user request
