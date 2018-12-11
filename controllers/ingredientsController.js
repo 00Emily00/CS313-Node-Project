@@ -9,7 +9,7 @@ const pool = new Pool({connectionString: connectionString});
 function getIngredients(req, res) {
     ingredientsModels.ingredients(pool, function(err, results) {
         //add if statement for err
-       res.json(results) 
+       res.json(results); 
     });
     
 }
