@@ -34,14 +34,14 @@ function getRecipes() {
 
 function getIngredients() {
     alert("getIngredients() function works");
-//    $.get("/ingredients", function(data) {
-//        alert(data);
-//        
-//    let list = "";
+    $.get("/ingredients", function(data) {
+        alert(data);
+        
+    let list = "";
 //    for(i in data) {
 //        
 //    }
-//    });
+    });
 }
 
 //function getIngredients() {
