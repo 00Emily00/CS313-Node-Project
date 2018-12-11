@@ -13,7 +13,7 @@ function getInformation() {
         
         let list = "";
         for(info in data) {
-            list += "<h1>" + data[r].topics + "</h1>";
+            list += "<h1>" + data[info].topics + "</h1>";
         }
         document.getElementById("content").innerHTML = list;
     });
