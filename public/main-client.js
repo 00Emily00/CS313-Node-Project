@@ -32,7 +32,7 @@ function getRecipes() {
     });
 }
 
-function postIngredients() {
+function getIngredients() {
     var i = $("#listOfIngredients").val();
     
     $.get("/ingredients"), function(data) {
