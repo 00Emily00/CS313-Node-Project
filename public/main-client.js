@@ -33,11 +33,10 @@ function getRecipes() {
 }
 
 function getIngredients() {
-    var i = $("#listOfIngredients").val();
+    //var r = $("#recipes").val();
     
     $.get("/ingredients", function(data) {
-        alert(data);
-        
+     alert(data);
         let list = "";
         for(i in data) {
             list += "<p>" + data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + " </p><br>";
@@ -45,6 +44,7 @@ function getIngredients() {
         document.getElementById("content").innerHTML = list;
     });
 }
-    
-    
 
+    
+        
+       
