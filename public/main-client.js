@@ -38,9 +38,11 @@ function getIngredients() {
         alert(data);
         
     let list = "";
+    list += "<h1>List of Ingredients</h1><br><p>";
     for(i in data) {
-        list += "<h1>List of Ingredients</h1><br><p>" + data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + "</p><br>";
+        list += data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + "</p><br>";
     }
+        list += "<form id='formIngredient'><input type='text'>Ingredient<br><button id='addMoreIngredients' onclick='postIngredients()'></form>"
         document.getElementById("content").innerHTML = list;
     });
 }
@@ -60,9 +62,9 @@ function getIngredients() {
 //    });
 //}
 
-//function postIngredients() {
-//    
-//}
+function postIngredients() {
+    alert("postIngredients function was called");
+}
 
 
 
