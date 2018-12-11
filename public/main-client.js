@@ -41,9 +41,17 @@ function getIngredients() {
         for(i in data) {
             list += "<p>" + data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + " </p><br>";
         }
+        //list += inputs & button w/onclick to postIngredients()
+        
         document.getElementById("content").innerHTML = list;
     });
 }
+
+//function postIngredients() {
+//    
+//}
+
+
 
     
         
