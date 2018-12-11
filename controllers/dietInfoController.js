@@ -1,13 +1,18 @@
+const infoModels = require("./../models/dietInfoModel.js");
+
+const { Pool } = require("pg");
+//connection needed to connect to the database --the server, etc
+const connectionString = process.env.DATABASE_URL || "postgres://familyhistoryuser:emily@localhost:5432/familyhistory";
+const pool = new Pool({connectionString: connectionString});
+
 function getdietInformation(req, res) {
-    console.log("Getting the information");
+     console.log("Getting diet information");
+    var id = req.query.id;
     
-     var results = {
-        recipes: [
-            {id: 1, rule: "It is important to always drink water"}
-            ]
-    }
-     
-    res.json(results);
+    //this calls the function in the model and function(results) brings back resuls from the callback in the model
+    infoModels.getAllInfo(pool, function(results) {
+        res.json(results); //sents it back to the client
+    });
 }
 
 module.exports = {

@@ -15,6 +15,7 @@ app.use(express.urlencoded({extended: true})); //support url encoded bodies
 
 
 app.get("/recipes", recipeController.getRecipe);
+app.get("/dietInformation",dietInfoController.getDietInformation);
 
 
 //app.get("/information", );

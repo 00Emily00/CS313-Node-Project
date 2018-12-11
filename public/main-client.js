@@ -7,9 +7,15 @@ function getInformation() {
     console.log("Info" +info);
     
     //getting info from server.js
-    $.get("/dietInformation", {info: info}, function(data) {
+    $.get("/dietInformation", function(data) {
         console.log("Back from the server with:");
         console.log(data);
+        
+        let list = "";
+        for(info in data) {
+            list += "<h1>" + data[r].topics + "</h1>";
+        }
+        document.getElementById("content").innerHTML = list;
     });
 }
 function getRecipes() {
