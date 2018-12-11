@@ -15,7 +15,7 @@ function getAllRecipes(pool, callback) {
 //    }
 //    callback(results);
     //function(results) {  res.json(results) }); from recipeController.js
-
+}
 //
 //function getRecipeById(id, callback) {
 //    //get recipe from the DB that matches that id
