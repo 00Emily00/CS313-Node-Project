@@ -17,7 +17,7 @@ function getDietInformation(req, res) {
 
 module.exports = {
     getDietInformation: getDietInformation
-}
+};
 
 //handling user request
 //send things to the model

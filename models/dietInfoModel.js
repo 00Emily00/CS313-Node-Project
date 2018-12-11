@@ -8,6 +8,6 @@ function getAllInfo(pool, callback) {
     });
 }
     
-    module.export = {
+    module.exports = {
         getAllInfo: getAllInfo
     }
