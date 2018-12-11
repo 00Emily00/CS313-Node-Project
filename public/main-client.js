@@ -38,9 +38,10 @@ function getIngredients() {
         alert(data);
         
     let list = "";
-//    for(i in data) {
-//        
-//    }
+    for(i in data) {
+        list += "<h1>List of Ingredients</h1><br><p>" + data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + "</p><br>";
+    }
+        document.getElementById("content").innerHTML = list;
     });
 }
 
