@@ -5,6 +5,7 @@ const path = require("path");
 //var fs = require('fs');
 const recipeController = require("./controllers/recipeController.js");
 const dietInfoController = require("./controllers/dietInfoController.js");
+const ingredientsController = require("./controllers/ingredientsController.js");
  
 const PORT = process.env.PORT || 5000;
 
@@ -16,6 +17,7 @@ app.use(express.urlencoded({extended: true})); //support url encoded bodies
 
 app.get("/recipes", recipeController.getRecipe);
 app.get("/dietInformation", dietInfoController.getDietInformation);
+app.get("/ingredients", ingredientsController.getIngredients);
 
 
 //app.get("/information", );

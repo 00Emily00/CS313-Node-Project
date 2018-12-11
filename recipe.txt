@@ -1,0 +1,20 @@
+ingredients
+
+banana 1 105 fruit
+strawberry 1 4 fruit
+blueberry 1cup 85 fruit
+Cherries 1cup 77 fruit
+Orange Juice 1cup 111 beverage
+Vanilla Yogurt 0.5cups 114 dairy
+Honey 1 tbsp 64 sugar
+
+
+INSERT INTO ingredients(ingredients, quantity, calories, foodgroup)VALUES("banana","1","105","fruit");
+
+INSERT INTO ingredients(ingredients, quantity, calories, foodgroup)VALUES('strawberry', '1','4',fruit);
+INSERT INTO ingredients(ingredients, quantity, calories, foodgroup)VALUES('blueberry','1 cup','85','fruit');
+INSERT INTO ingredients(ingredients, quantity, calories, foodgroup)VALUES('cherry','1 cup','77','fruit');
+INSERT INTO ingredients(ingredients, quantity, calories, foodgroup)VALUES('orange juice','1 cup','111','beverage');
+INSERT INTO ingredients(ingredients, quantity, calories, foodgroup)VALUES('vanilla yogurt','0.5 cups','114','dairy');
+INSERT INTO ingredients(ingredients, quantity, calories, foodgroup)VALUES('honey','1 tbsp','64','sugar');
+

@@ -31,3 +31,19 @@ function getRecipes() {
         document.getElementById("content").innerHTML = list;
     });
 }
+
+function postIngredients() {
+    var i = $("#listOfIngredients").val();
+    
+    $.get("/ingredients"), function(data) {
+        alert(data);
+        
+        let list = "";
+        for(i in data) {
+            list += "<p>" + data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + " </p><br>";
+        }
+        document.getElementById("content").innerHTML = list;
+    }
+    
+    
+}
