@@ -66,7 +66,9 @@ function postIngredients() {
     alert("postIngredients function was called");
     
     let add = "";
-    add += "<input typ='text'>Ingredient';
+    add += "<input type='text'>Ingredient';
+    
+   
 }
 
 
