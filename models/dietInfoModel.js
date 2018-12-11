@@ -6,7 +6,7 @@ function getAllInfo(pool, callback) {
     pool.query(DBinfo, function(err, results) {
             callback(results.rows);
     });
-    
+}
     
     module.export = {
         getAllInfo: getAllInfo
