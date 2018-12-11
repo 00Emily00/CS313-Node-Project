@@ -42,7 +42,7 @@ function getIngredients() {
     for(i in data) {
         list += data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + "</p><br>";
     }
-        list += "<form id='formIngredient'><input type='text'>Ingredient<br><button id='addMoreIngredients' onclick='postIngredients()'></form>"
+        list += "<button id='addMoreIngredients' onclick='postIngredients()'>"
         document.getElementById("content").innerHTML = list;
     });
 }
