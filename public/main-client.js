@@ -42,19 +42,31 @@ function getIngredients() {
     for(i in data) {
         list += data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + "</p><br>";
     }
-        list += "<button id='addMoreIngredients' onclick='postIngredients()' name='Add More Items'>Add More Items</button>"
+        list += "<button id='addMoreIngredients' onclick='userInput()' name='Add More Items'>Add More Items</button>"
         document.getElementById("content").innerHTML = list;
     });
 }
 
-function postIngredients() {
-    alert("postIngredients function was called");
+function userInput() {
+    alert("userInput function was called");
     
     let add = "";
-    add += "Ingredient<input type='text' name='ingredient'> Quantity<input type='text' name='ingredient'>Calories<input type='text' name='ingredient'>Food Group<input type='text' name='ingredient'><button type='button'>Add Item</button>";
+    add += "Ingredient<input type='text' name='ingredient' id='ingredient'> Quantity<input type='text' id='quantity'>Calories<input type='text' id='calories'>Food Group<input type='text' id='foodgroup'><button type='button' onclick='postIngredients()'>Add Item</button>";
     
     document.getElementById("content2").innerHTML = add;
-   
+    
+    
+    var i = $("#ingredient").val();
+    var q = $("#quantity").val();
+    var c = $("#calories").val();
+    var f = $("#foodgroup").val();
+    
+
+}
+
+function postIngredients() {
+     alert("postIngredients function was called");
+     alert(i + q + c + f);
 }
 
 
