@@ -66,7 +66,7 @@ function postIngredients() {
     alert("postIngredients function was called");
     
     let add = "";
-    add += "<input type='text' name='Ingredient'";
+    add += "<input type='text' name='ingredient'>";
     
     document.getElementById("content2").innerHTML = add;
    
