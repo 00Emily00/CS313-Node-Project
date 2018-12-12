@@ -42,25 +42,10 @@ function getIngredients() {
     for(i in data) {
         list += data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + "</p><br>";
     }
-        list += "<button id='addMoreIngredients' onclick='postIngredients()' name='Add More Items'>"
+        list += "<button id='addMoreIngredients' onclick='postIngredients()' name='Add More Items'>Add More Items</button>"
         document.getElementById("content").innerHTML = list;
     });
 }
-
-//function getIngredients() {
-//    //var r = $("#recipes").val();
-//    
-//    $.get("/ingredients", function(data) {
-//     alert(data);
-//        let list = "";
-//        for(i in data) {
-//            list += "<p>" + data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + " </p><br>";
-//        }
-//        //list += inputs & button w/onclick to postIngredients()
-//        
-//        document.getElementById("content").innerHTML = list;
-//    });
-//}
 
 function postIngredients() {
     alert("postIngredients function was called");
