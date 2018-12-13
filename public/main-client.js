@@ -70,11 +70,17 @@ function createObject() {
     var foodgroup = $("#foodgroup").val();
     
     var submitInput = {
-        "ingredient" : ingredient,
-        "quantity" : quantity,
-        "calories" : calories,
-        "foodgroup" : foodgroup
+        ingredient : ingredient,
+        quantity : quantity,
+        calories : calories,
+        foodgroup : foodgroup
     }
+    
+    $.post("/ingredients", submitInput, function(data) {
+        console.log("ingredient add inside creatObject()");
+        console.log(data);
+        //clear out text boxes and update list
+    });
     
     console.log(submitInput);
 }

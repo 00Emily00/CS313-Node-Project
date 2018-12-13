@@ -15,8 +15,20 @@ function getIngredients(req, res) {
     console.log("It actually went into getIngredients(req,res) in the controller");
 }
 
+function postIngredients(req,res) {
+    
+    var quantity = req.body.quantity;
+    var calories = 
+    
+    ingredientsModels.insertIngredients(pool, function(results) {
+        res.json(results);
+    });
+}
+
+
 module.exports = {
-    getIngredients: getIngredients
+    getIngredients: getIngredients,
+    postingredients: postIngredients
 };
 
 //function postIngredients(req, res) {
