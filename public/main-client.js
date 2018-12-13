@@ -1,10 +1,10 @@
 function getInformation() {
     alert("woohoo you did step 2");
-    console.log("Getting diet information");
+   // console.log("Getting diet information");
     
     //updating the DOM
     var info = $("#dietFacts").val();
-    console.log("Info" +info);
+   // console.log("Info" +info);
     
     //getting info from server.js
     $.get("/dietInformation", function(data) {
@@ -35,7 +35,7 @@ function getRecipes() {
 function getIngredients() {
     alert("getIngredients() function works");
     $.get("/ingredients", function(data) {
-        alert(data);
+  //      alert(data);
         
     let list = "";
     list += "<h1>List of Ingredients</h1><br><p>";
@@ -48,7 +48,7 @@ function getIngredients() {
 }
 
 function userInput() {
-    alert("userInput function was called");
+  //  alert("userInput function was called");
     
     let add = "";
     add += "Ingredient<input type='text' name='ingredient' id='ingredient'> Quantity<input type='text' id='quantity'>Calories<input type='text' id='calories'>Food Group<input type='text' id='foodgroup'><button type='button' onclick='createObject()'>Add Item</button>";
@@ -77,8 +77,8 @@ function createObject() {
     }
     
     $.post("/ingredients", submitInput, function(data) {
-        console.log("ingredient add inside creatObject()");
-        console.log(data);
+       // console.log("ingredient add inside creatObject()");
+       // console.log(data);
         //clear out text boxes and update list
     });
     
