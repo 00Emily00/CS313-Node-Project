@@ -1,5 +1,5 @@
 function getInformation() {
-    alert("woohoo you did step 2");
+   // alert("woohoo you did step 2");
    // console.log("Getting diet information");
     
     //updating the DOM
@@ -22,7 +22,7 @@ function getRecipes() {
     var r = $("#recipes").val();
     
     $.get("/recipes", function(data) {
-        alert(data);
+     //   alert(data);
     let list = "";
         for(r in data) {
             list += "<h1>" + data[r].name + "</h1><p>" + data[r].recipe_instructions + "</p><br>";
@@ -33,7 +33,7 @@ function getRecipes() {
 }
 
 function getIngredients() {
-    alert("getIngredients() function works");
+  //  alert("getIngredients() function works");
     $.get("/ingredients", function(data) {
   //      alert(data);
         
