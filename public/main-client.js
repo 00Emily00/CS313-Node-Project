@@ -51,22 +51,37 @@ function userInput() {
     alert("userInput function was called");
     
     let add = "";
-    add += "Ingredient<input type='text' name='ingredient' id='ingredient'> Quantity<input type='text' id='quantity'>Calories<input type='text' id='calories'>Food Group<input type='text' id='foodgroup'><button type='button' onclick='postIngredients()'>Add Item</button>";
+    add += "Ingredient<input type='text' name='ingredient' id='ingredient'> Quantity<input type='text' id='quantity'>Calories<input type='text' id='calories'>Food Group<input type='text' id='foodgroup'><button type='button' onclick='createObject()'>Add Item</button>";
     
     document.getElementById("content2").innerHTML = add;
     
     
-    var i = $("#ingredient").val();
-    var q = $("#quantity").val();
-    var c = $("#calories").val();
-    var f = $("#foodgroup").val();
     
+    //json object send to server,
+    
+}
 
+//creating json object
+function createObject() {
+    
+   var ingredient = $("#ingredient").val();
+    var quantity = $("#quantity").val();
+    var calories = $("#calories").val();
+    var foodgroup = $("#foodgroup").val();
+    
+    var submitInput = {
+        "ingredient" : ingredient,
+        "quantity" : quantity,
+        "calories" : calories,
+        "foodgroup" : foodgroup
+    }
+    
+    console.log(submitInput);
 }
 
 function postIngredients() {
      alert("postIngredients function was called");
-     alert(i + q + c + f);
+    
 }
 
 

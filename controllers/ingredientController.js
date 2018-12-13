@@ -18,3 +18,9 @@ function getIngredients(req, res) {
 module.exports = {
     getIngredients: getIngredients
 };
+
+//function postIngredients(req, res) {
+//    ingredientsModels.insertIngredients(pool, function(results) {
+//        res.json(results);
+//    });
+//}
