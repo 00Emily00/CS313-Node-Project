@@ -22,6 +22,12 @@ function postIngredients(req,res) {
     var calories = req.body.calories;
     var foodGroup = req.body.foodgroup;
     
+    console.log("Inside postIngredients(req,res)");
+    console.log(ingredients);
+    console.log(quantity);
+    console.log(calories);
+    console.log(foodGroup);
+    
     ingredientsModels.insertIngredients(pool, function(results) {
         res.json(results);
         console.log(results);
