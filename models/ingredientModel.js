@@ -7,7 +7,7 @@ function ingredients(pool, callback) {
     });
 }
 
-function insertingredients(pool,ingredients, quantity, calories, foodgroup,callback) {
+function insertIngredients(pool,ingredients, quantity, calories, foodgroup,callback) {
     
     var DBinfo = "INSERT INTO ingredients(ingredients,quantity, calories, foodgroup)VALUES(" + ingredients + "," + quantity + "," + calories + "," + foodgroup + ")";
     
@@ -18,5 +18,5 @@ function insertingredients(pool,ingredients, quantity, calories, foodgroup,callb
 
 module.exports = {
     ingredients: ingredients,
-    insertIngredients : insertingredients
+    insertIngredients : insertIngredients
 }
