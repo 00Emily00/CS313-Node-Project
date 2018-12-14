@@ -79,6 +79,8 @@ function createObject() {
     $.post("/ingredients", submitInput, function(data) {
         let list = "";
         list += data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + "</p><br>";
+        
+        document.getElementById("content").innerHTML = list;
        // console.log("ingredient add inside creatObject()");
        // console.log(data);
         //clear out text boxes and update list
@@ -87,10 +89,6 @@ function createObject() {
     console.log(submitInput);
 }
 
-function postIngredients() {
-     alert("postIngredients function was called");
-    
-}
 
 
 
