@@ -19,7 +19,7 @@ app.get("/recipes", recipeController.getRecipe);
 app.get("/dietInformation", dietInfoController.getDietInformation);
 app.get("/ingredients", ingredientController.getIngredients);
 
-//app.post("/ingredients",ingredientController.postIngredients);
+app.post("/ingredients",ingredientController.postIngredients);
 
 //app.get("/ingredients", ingredientsController.getIngredients);
 

@@ -30,7 +30,7 @@ function postIngredients(req,res) {
 
 module.exports = {
     getIngredients: getIngredients,
-    postingredients: postIngredients
+    postIngredients: postIngredients
 };
 
 //function postIngredients(req, res) {
