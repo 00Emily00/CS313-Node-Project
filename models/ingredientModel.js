@@ -18,5 +18,5 @@ function insertingredients(pool,ingredients, quantity, calories, foodgroup,callb
 
 module.exports = {
     ingredients: ingredients,
-    insertingredients : insertingredients
+    insertIngredients : insertingredients
 }
