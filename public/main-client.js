@@ -80,12 +80,12 @@ function createObject() {
         let list = "";
         list += data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + "</p><br>";
         
-        document.getElementById("content").innerHTML = list;
        // console.log("ingredient add inside creatObject()");
        // console.log(data);
         //clear out text boxes and update list
     });
-    
+            document.getElementById("content").innerHTML = list;
+
     console.log(submitInput);
 }
 

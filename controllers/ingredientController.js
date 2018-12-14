@@ -29,7 +29,7 @@ function postIngredients(req,res) {
     console.log(foodGroup);
     
     ingredientsModels.insertIngredients(pool, function(results) {
-
+        
         console.log(results);
     });
 }
