@@ -9,7 +9,7 @@ function ingredients(pool, callback) {
 
 function insertingredients(pool,ingredients, quantity, calories, foodgroup,callback) {
     
-    var DBinfo = "INSERT INTO ingredients(ingredients,quantity, calories, foodgroup)VALUES()";
+    var DBinfo = "INSERT INTO ingredients(ingredients,quantity, calories, foodgroup)VALUES(" + ingredients + "," + quantity + "," + calories + "," + "," + foodgroup + ")";
     
     pool.query(DBinfo, function(err, results) {
         callback(results.rows);
