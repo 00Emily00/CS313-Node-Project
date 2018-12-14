@@ -24,6 +24,7 @@ function postIngredients(req,res) {
     
     ingredientsModels.insertIngredients(pool, function(results) {
         res.json(results);
+        console.log(results);
     });
 }
 
