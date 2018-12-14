@@ -17,8 +17,10 @@ function getIngredients(req, res) {
 
 function postIngredients(req,res) {
     
+    var ingredients = req.body.ingredient;
     var quantity = req.body.quantity;
-    var calories = 
+    var calories = req.body.calories;
+    var foodGroup = req.body.foodgroup;
     
     ingredientsModels.insertIngredients(pool, function(results) {
         res.json(results);
