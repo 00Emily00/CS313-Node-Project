@@ -12,7 +12,7 @@ function insertingredients(pool,ingredients, quantity, calories, foodgroup,callb
     var DBinfo = "INSERT INTO ingredients(ingredients,quantity, calories, foodgroup)VALUES(" + ingredients + "," + quantity + "," + calories + "," + "," + foodgroup + ")";
     
     pool.query(DBinfo, function(err, results) {
-        callback(results);
+        console.log(results);
     });
 }
 
