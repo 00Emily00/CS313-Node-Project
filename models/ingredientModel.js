@@ -9,10 +9,17 @@ function ingredients(pool, callback) {
 
 function insertIngredients(pool,ingredients, quantity, calories, foodgroup,callback) {
     
-    var DBinfo = "INSERT INTO ingredients(ingredients,quantity, calories, foodgroup)VALUES(" + ingredients + "," + quantity + "," + calories + "," + foodgroup + ")";
+    params = [ingredients,quantity,calories,foodgroup];
     
-    pool.query(DBinfo, function(err, results) {
-        console.log(results);
+    var DBinfo = "INSERT INTO ingredients(ingredients,quantity, calories, foodgroup)VALUES($1::str,$2::str,$3::str,$4::str)";
+    
+    pool.query(DBinfo, params, function(err, results) {
+        if(err) {
+             console.log("Error in QUERY");
+            console.log(err);
+        }else
+        console.log("Success");
+        
     });
 }
 
