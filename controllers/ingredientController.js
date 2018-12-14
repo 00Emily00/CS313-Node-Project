@@ -28,9 +28,9 @@ function postIngredients(req,res) {
     console.log(calories);
     console.log(foodGroup);
     
-    ingredientsModels.insertIngredients(pool, function(results) {
+    ingredientsModels.insertIngredients(pool, ingredients, quantity, calories, foodGroup,function(results) {
         
-        console.log(results);
+        console.log("inserIngredients inside controller" + results);
     });
 }
 
