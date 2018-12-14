@@ -83,8 +83,10 @@ function createObject() {
     });
     
     $.get("/ingredients", function(data) {
-         let list = "";
+        let list = "";
+         for(i in data) {
         list += data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + "</p><br>";
+    }
         
      document.getElementById("content").innerHTML = list;
     });
