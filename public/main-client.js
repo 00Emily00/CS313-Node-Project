@@ -55,7 +55,7 @@ function userInput() {
     
     document.getElementById("content2").innerHTML = add;
     
-    
+    console.log("WE WERE ACTUALLY ABLE TO GET USER INPUT " + add);
     
     //json object send to server,
     
