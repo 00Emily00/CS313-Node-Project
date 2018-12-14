@@ -11,7 +11,7 @@ function insertIngredients(pool,ingredients, quantity, calories, foodgroup,callb
     
     params = [ingredients,quantity,calories,foodgroup];
     
-    var DBinfo = "INSERT INTO ingredients(ingredients,quantity, calories, foodgroup)VALUES($1::str,$2::str,$3::int,$4::str)";
+    var DBinfo = "INSERT INTO ingredients(ingredients,quantity, calories, foodgroup)VALUES($1::varchar,$2::varchar,$3::int,$4::varchar)";
     
     pool.query(DBinfo, params, function(err, results) {
         if(err) {
