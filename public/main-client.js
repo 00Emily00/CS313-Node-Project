@@ -79,6 +79,8 @@ function createObject() {
     $.post("/ingredients", submitInput, function(data) {
         console.log("ingredient add inside creatObject()");
         console.log(data);
+        
+        getIngredients();
         //clear out text boxes and update list
     });
     
