@@ -17,10 +17,12 @@ function insertIngredients(pool,ingredients, quantity, calories, foodgroup,callb
         if(err) {
              console.log("Error in QUERY");
             console.log(err);
+            callback(err,null);
         }else
         console.log("Success");
-        
+        callback(null);
     });
+    
 }
 
 module.exports = {
