@@ -38,9 +38,9 @@ function getIngredients() {
   //      alert(data);
         
     let list = "";
-    list += "<h1>List of Ingredients</h1><br><p>";
+    list += "<h1>List of Ingredients</h1><br>";
     for(i in data) {
-        list += data[i].ingredients + " " + data[i].quantity + " " + data[i].calories + " " + data[i].foodgroup + "</p><br>";
+        list += "<table><tr><th>Ingredients</th><th>Quantity</th><th>Calories</th><th>Food Group</th></tr> <tr><td>" + data[i].ingredients + "</td><td>" + data[i].quantity + "</td><td>" + data[i].calories + "</td><td>" + data[i].foodgroup + "</td></table><br>";
     }
         list += "<button id='addMoreIngredients' onclick='userInput()' name='Add More Items'>Add More Items</button>"
         document.getElementById("content").innerHTML = list;
