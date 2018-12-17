@@ -18,3 +18,9 @@ INSERT INTO ingredients(ingredients, quantity, calories, foodgroup)VALUES('orang
 INSERT INTO ingredients(ingredients, quantity, calories, foodgroup)VALUES('vanilla yogurt','0.5 cups','114','dairy');
 INSERT INTO ingredients(ingredients, quantity, calories, foodgroup)VALUES('honey','1 tbsp','64','sugar');
 
+Recipes
+
+INSERT INTO recipes(name, recipe_instructions)VALUES('Pumpkin Chocolate Chip Cookies','Preheat oven to 350
+combine 1/2 cup of oil, 1 cup of 100% pure pumpkin, 1 cup of sugar, 1 egg and 1 tsp. of vanilla. In a separate bowl combine 1 tsp. of baking soda and 1 tsp. of milk. Then add to pumpkin mixture. In another bowl combine 2 tsps. of cinnamon, 2 tsps. of baking powder, 1/2 tsp ofsalt and 2 cups of flour. Then add pumpkin mixture. Note: if too gooey just add more flour. Fold in chocolate chips. Allow batter to sit for 15 minutes. Shape cookies and put them on a cookie sheet. Bake for about 10-15 minutes.');
+
+INSERT INTO recipes(name,recipe_instructions)VALUES('Simple Chocolate Cake','Preheat oven to 350 degrees F. Grease an 8x8-inch baking dish. Mix 1 cup flour, 1 cup sugar, 1/2 cocoa powder, 3/4 tsps baking powder, 3/4 tsps baking soda, and 1/2 tsp salt. Add in 1 egg, 1/2 cup milk, 1/4 cup oil and 2 tsps vanilla and mix very well. Slowly pour the 1/2 cup boiling water and gently stir-batter. (It will become very thin) Pour batter in the dish and put in the oven. Bake for about 35-40 minutes or until inserted toothpick is clean. Take out and let cool. Melt 1 cup chocolate chips and mix with 1/2 sour cream and the 1 tsp vanilla and spread on the bread.');
